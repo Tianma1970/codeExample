@@ -1,5 +1,6 @@
 //the host button
-const addPath = document.querySelector(".button1")
+const secure = document.querySelector(".button1")
+console.log(location.pathname)
 
 //the host button
 const host = document.querySelector(".button2")
@@ -8,8 +9,17 @@ const host = document.querySelector(".button2")
 const reload = document.querySelector(".button3")
 
 //show the path
-addPath.addEventListener("click", () => {
-  document.getElementById("demo").innerHTML = location.pathname
+secure.addEventListener("click", () => {
+  let protocol = (document.getElementById("demo").innerHTML = location.protocol)
+  if (protocol == "http:") {
+    //alert("I am not secure")
+    const createEl = document.createElement("h1")
+    console.log(createEl)
+    createEl.append("I am not secure")
+
+    const addText = document.querySelector(".text")
+    addText.append(createEl)
+  }
 })
 
 //show the host
