@@ -14,12 +14,12 @@ secure.addEventListener("click", () => {
   if (protocol == "http:") {
     let createEl = document.createElement("h1")
     console.log(createEl)
-    createEl.append("I am not secure 👎")
+    createEl.append("I am not secure 👎 because I am " + location.protocol)
 
     const addText = document.querySelector(".text")
     addText.append(createEl)
   } else {
-    alert("I AM SECURE 👍")
+    alert("I AM SECURE 👍 because I am " + location.protocol)
   }
 })
 
