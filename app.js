@@ -38,7 +38,7 @@ host.addEventListener("click", () => {
 reload.addEventListener("click", () => {
   location.reload()
 })
-
+//use document.querySelectorAll for changing color
 function changeColor() {
   let changeContainerColor, i
   changeContainerColor = document.querySelectorAll(".wrapper")
@@ -55,4 +55,12 @@ function resetColor() {
   for (i = 0; i < resetColor.length; i++) {
     resetColor[i].style.backgroundColor = "grey"
   }
+}
+
+//appendChild
+function addList() {
+  let listEl = document.createElement("div")
+  let list = document.createTextNode("something nice")
+  listEl.appendChild(list)
+  document.getElementById("addItem").appendChild(list)
 }
