@@ -1,5 +1,6 @@
 .container {
   display: flex;
+  justify-content: space-around;
 }
 
 .wrapper {
@@ -13,4 +14,7 @@
 .buttons {
   display: flex;
   flex-direction: column;
+}
+button {
+  margin: 10px;
 }
