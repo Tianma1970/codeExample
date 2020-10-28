@@ -1,6 +1,5 @@
 //the host button
 const secure = document.querySelector(".button1")
-console.log(location.pathname)
 
 //the host button
 const host = document.querySelector(".button2")
@@ -13,7 +12,7 @@ secure.addEventListener("click", () => {
   let protocol = (document.getElementById("demo").innerHTML = location.protocol)
   if (protocol == "http:") {
     let createEl = document.createElement("h1")
-    console.log(createEl)
+
     createEl.append("I am not secure 👎 because I am " + location.protocol)
 
     const addText = document.querySelector(".text")
@@ -25,10 +24,18 @@ secure.addEventListener("click", () => {
 
 //show the host
 host.addEventListener("click", () => {
-  document.getElementById("host").innerHTML = location.host
+  let createHostEl = document.createElement("h1")
+
+  createHostEl.append("My host is " + location.host)
+  const addHost = document.querySelector(".text")
+  addHost.append(createHostEl)
 })
 
 //reload the page
 reload.addEventListener("click", () => {
   location.reload()
 })
+
+//use document.querySelectorAll
+
+const changeButtonColour = document.querySelectorAll("buttons")
