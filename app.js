@@ -7,10 +7,9 @@ const host = document.querySelector(".button2")
 //reload the page
 const reload = document.querySelector(".button3")
 
-//show the path
+//show the location.protocol
 secure.addEventListener("click", () => {
-  let protocol = (document.getElementById("demo").innerHTML = location.protocol)
-  if (protocol == "http:") {
+  if (location.protocol == "http:") {
     let createEl = document.createElement("h1")
 
     createEl.append("I am not secure 👎 because I am " + location.protocol)
