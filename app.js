@@ -12,13 +12,14 @@ const reload = document.querySelector(".button3")
 secure.addEventListener("click", () => {
   let protocol = (document.getElementById("demo").innerHTML = location.protocol)
   if (protocol == "http:") {
-    //alert("I am not secure")
-    const createEl = document.createElement("h1")
+    let createEl = document.createElement("h1")
     console.log(createEl)
-    createEl.append("I am not secure")
+    createEl.append("I am not secure 👎")
 
     const addText = document.querySelector(".text")
     addText.append(createEl)
+  } else {
+    alert("SURE")
   }
 })
 
