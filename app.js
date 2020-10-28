@@ -39,6 +39,11 @@ reload.addEventListener("click", () => {
   location.reload()
 })
 
-//use document.querySelectorAll
-
-const changeButtonColour = document.querySelectorAll("buttons")
+function changeColor() {
+  let changeContainerColor, i
+  changeContainerColor = document.querySelectorAll(".wrapper")
+  console.log(changeContainerColor)
+  for (i = 0; i < changeContainerColor.length; i++) {
+    changeContainerColor[i].style.backgroundColor = "fuchsia"
+  }
+}
