@@ -14,7 +14,11 @@
 .buttons {
   display: flex;
   flex-direction: column;
+  border: solid black;
+  border-radius: 8px;
+  width: 30vw;
 }
 button {
   margin: 10px;
+  width: 100px;
 }
