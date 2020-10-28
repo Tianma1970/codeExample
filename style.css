@@ -9,3 +9,8 @@
   border-radius: 8px;
   width: 80vw;
 }
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
