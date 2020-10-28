@@ -19,7 +19,7 @@ secure.addEventListener("click", () => {
     const addText = document.querySelector(".text")
     addText.append(createEl)
   } else {
-    alert("SURE")
+    alert("I AM SECURE 👍")
   }
 })
 
