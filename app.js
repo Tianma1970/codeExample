@@ -10,14 +10,18 @@ const reload = document.querySelector(".button3")
 //show the location.protocol
 secure.addEventListener("click", () => {
   if (location.protocol == "http:") {
-    let createEl = document.createElement("h1")
+    const createEl = document.createElement("h1")
 
     createEl.append("I am not secure 👎 because I am " + location.protocol)
 
     const addText = document.querySelector(".text")
     addText.append(createEl)
   } else {
-    alert("I AM SECURE 👍 because I am " + location.protocol)
+    const createEl = document.createElement("h1")
+
+    createEl.append("I AM SECURE 👍 because I am " + location.protocol)
+    const addText = document.querySelector(".text")
+    addText.append(createEl)
   }
 })
 
