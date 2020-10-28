@@ -47,3 +47,12 @@ function changeColor() {
     changeContainerColor[i].style.backgroundColor = "fuchsia"
   }
 }
+
+//use document.querySelectorAll for reset color
+function resetColor() {
+  let resetColor, i
+  resetColor = document.querySelectorAll(".wrapper")
+  for (i = 0; i < resetColor.length; i++) {
+    resetColor[i].style.backgroundColor = "grey"
+  }
+}
