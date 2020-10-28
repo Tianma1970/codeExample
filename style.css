@@ -1,0 +1,7 @@
+.wrapper {
+  display: flex;
+  background-color: rgb(220, 220, 220);
+  border: solid black;
+  border-radius: 8px;
+  width: 80vw;
+}
