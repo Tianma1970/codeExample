@@ -60,7 +60,7 @@ function resetColor() {
 //appendChild
 function addList() {
   let listEl = document.createElement("div")
-  let list = document.createTextNode("something nice")
+  let list = document.createTextNode("not so nice 🥴")
   listEl.appendChild(list)
   document.getElementById("addItem").appendChild(list)
 }
