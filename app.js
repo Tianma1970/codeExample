@@ -78,24 +78,25 @@ function resetWeather() {
   location.reload()
 }
 
-//use map and filter
+//add an ul of cars when clicking a button
 const showList = document.querySelector(".showList")
 const addCar = document.querySelector("ul")
+let cars = "<li>Volvo</li> <li>Käfer</li> <li>Trabant</li> <li>Saab</li><li>Mercedes</li><li>Fiat</li><li>Jaguar</li>"
+let newArray = cars.split(" ")
 
 showList.addEventListener("click", () => {
-  let cars = "<li>Volvo</li> <li>Käfer</li> <li>Trabant</li> <li>Saab</li>"
   addCar.insertAdjacentHTML("beforeend", cars)
-  let newArray = cars.split(" ")
   console.log(newArray)
   let randomCar = Math.floor(Math.random() * newArray.length)
   let carItem = newArray[randomCar]
   console.log(carItem)
-  //we need to loop the newArray
-  for (let i = 0; i < newArray.length; i++) {
-    if (newArray[i] === carItem) {
-      newArray.splice(i, 1)
-    }
-  }
-  console.log(newArray)
 })
-//remove a random car by click remove random item
+
+// use map to create a new array
+function showNumbers() {
+  //define the element where the new array has to be
+  const showSqrtNumber = document.querySelector(".sqrtNumbers")
+  let numbers = [9, 25, 36, 81]
+  let mathSqrt = numbers.map(Math.sqrt)
+  showSqrtNumber.insertAdjacentText("beforeend", mathSqrt)
+}
