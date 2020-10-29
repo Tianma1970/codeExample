@@ -1,10 +1,10 @@
-//the host button
+//the are you secure button
 const secure = document.querySelector(".button1")
 
 //the host button
 const host = document.querySelector(".button2")
 
-//reload the page
+//the reload button
 const reload = document.querySelector(".button3")
 
 //show the location.protocol
@@ -57,11 +57,11 @@ function resetColor() {
   }
 }
 
-//get the random weather after 2 seconds with appendChild
+//get the random weather after 1.5 seconds with createElement and appendChild
 function getWeather() {
   setTimeout(() => {
     let weatherItems = ["sunny☀️", "rainy🌧", "cloudy🌥", "partly sunny⛅️", "thunderstorm⛈", "snow⛄️"]
-
+    //get some random weather
     let random = Math.floor(Math.random() * weatherItems.length)
     let randomWeather = weatherItems[random]
     console.log(randomWeather)
@@ -79,7 +79,7 @@ function resetWeather() {
 }
 
 //show some numbers
-const numbers = [9, 25, 36, 81]
+const numbers = [9, 25, 36, 81, 144]
 
 function showNumbers() {
   const showNumbers = document.querySelector(".numbers")
