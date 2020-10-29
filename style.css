@@ -5,6 +5,7 @@
 
 .wrapper {
   display: flex;
+  justify-content: space-around;
   background-color: grey;
   border: solid black;
   border-radius: 8px;
