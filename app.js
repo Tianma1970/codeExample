@@ -80,12 +80,22 @@ function resetWeather() {
 
 //use map and filter
 const showList = document.querySelector(".showList")
-const addCar = document.querySelector(".wrapper")
+const addCar = document.querySelector("ul")
 
 showList.addEventListener("click", () => {
-  let cars = "<ul><li>Volvo</li><li>Käfer</li><li>Trabant</li><li>Saab </li></ul>"
-  console.log(cars)
-  // let carList = cars.map(() => {
-  //   cars.join(" ")
+  let cars = "<li>Volvo</li> <li>Käfer</li> <li>Trabant</li> <li>Saab</li>"
   addCar.insertAdjacentHTML("beforeend", cars)
+  let newArray = cars.split(" ")
+  console.log(newArray)
+  let randomCar = Math.floor(Math.random() * newArray.length)
+  let carItem = newArray[randomCar]
+  console.log(carItem)
+  //we need to loop the newArray
+  for (let i = 0; i < newArray.length; i++) {
+    if (newArray[i] === carItem) {
+      newArray.splice(i, 1)
+    }
+  }
+  console.log(newArray)
 })
+//remove a random car by click remove random item
