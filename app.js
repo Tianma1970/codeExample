@@ -57,7 +57,7 @@ function resetColor() {
   }
 }
 
-//get the random weather with appendChild
+//get the random weather after 2 seconds with appendChild
 function getWeather() {
   setTimeout(() => {
     let weatherItems = ["sunny☀️", "rainy🌧", "cloudy🌥", "partly sunny⛅️", "thunderstorm⛈", "snow⛄️"]
