@@ -42,7 +42,7 @@ reload.addEventListener("click", () => {
 function changeColor() {
   let changeContainerColor, i
   changeContainerColor = document.querySelectorAll(".wrapper")
-  console.log(changeContainerColor)
+  console.log("document.querySelectorAll returns " + changeContainerColor)
   for (i = 0; i < changeContainerColor.length; i++) {
     changeContainerColor[i].style.backgroundColor = "fuchsia"
   }
