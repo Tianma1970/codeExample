@@ -70,7 +70,7 @@ function getWeather() {
     let list = document.createTextNode(randomWeather)
     listEl.appendChild(list)
     document.getElementById("addItem").appendChild(list)
-  }, 2000)
+  }, 1500)
 }
 
 //reset the random weather
