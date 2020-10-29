@@ -78,25 +78,31 @@ function resetWeather() {
   location.reload()
 }
 
-//add an ul of cars when clicking a button
-const showList = document.querySelector(".showList")
-const addCar = document.querySelector("ul")
-let cars = "<li>Volvo</li> <li>Käfer</li> <li>Trabant</li> <li>Saab</li><li>Mercedes</li><li>Fiat</li><li>Jaguar</li>"
-let newArray = cars.split(" ")
+//show some numbers
+const numbers = [9, 25, 36, 81]
 
-showList.addEventListener("click", () => {
-  addCar.insertAdjacentHTML("beforeend", cars)
-  console.log(newArray)
-  let randomCar = Math.floor(Math.random() * newArray.length)
-  let carItem = newArray[randomCar]
-  console.log(carItem)
-})
-
-// use map to create a new array
 function showNumbers() {
+  const showNumbers = document.querySelector(".numbers")
+  showNumbers.insertAdjacentText("beforeend", numbers)
+}
+
+// use map to create a new array with sqrt of the numbers
+function showSquarerRoot() {
   //define the element where the new array has to be
   const showSqrtNumber = document.querySelector(".sqrtNumbers")
-  let numbers = [9, 25, 36, 81]
   let mathSqrt = numbers.map(Math.sqrt)
   showSqrtNumber.insertAdjacentText("beforeend", mathSqrt)
+}
+
+//display the first number in the array by using filter
+function showFirst() {
+  //define the element where the first number of the array to be inserted
+  const showFirstNumber = document.querySelector(".showFirstNumber")
+
+  let firstNumber = numbers.filter(number1)
+  function number1(number) {
+    return number < 25
+  }
+  console.log(firstNumber)
+  showFirstNumber.insertAdjacentText("beforeend", firstNumber)
 }
