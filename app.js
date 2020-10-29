@@ -77,3 +77,15 @@ function getWeather() {
 function resetWeather() {
   location.reload()
 }
+
+//use map and filter
+const showList = document.querySelector(".showList")
+const addCar = document.querySelector(".wrapper")
+
+showList.addEventListener("click", () => {
+  let cars = "<ul><li>Volvo</li><li>Käfer</li><li>Trabant</li><li>Saab </li></ul>"
+  console.log(cars)
+  // let carList = cars.map(() => {
+  //   cars.join(" ")
+  addCar.insertAdjacentHTML("beforeend", cars)
+})
