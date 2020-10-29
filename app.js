@@ -57,8 +57,8 @@ function resetColor() {
   }
 }
 
-//appendChild
-function addList() {
+//get the random weather with appendChild
+function getWeather() {
   setTimeout(() => {
     let weatherItems = ["sunny☀️", "rainy🌧", "cloudy🌥", "partly sunny⛅️", "thunderstorm⛈", "snow⛄️"]
 
@@ -71,4 +71,9 @@ function addList() {
     listEl.appendChild(list)
     document.getElementById("addItem").appendChild(list)
   }, 2000)
+}
+
+//reset the random weather
+function resetWeather() {
+  location.reload()
 }
