@@ -59,8 +59,14 @@ function resetColor() {
 
 //appendChild
 function addList() {
+  let weatherItems = ["sunny☀️", "rainy🌧", "cloudy🌥", "partly sunny⛅️", "thunderstorm⛈", "snow⛄️"]
+
+  let random = Math.floor(Math.random() * weatherItems.length)
+  let randomWeather = weatherItems[random]
+  console.log(randomWeather)
   let listEl = document.createElement("div")
-  let list = document.createTextNode("not so nice 🥴")
+
+  let list = document.createTextNode(randomWeather)
   listEl.appendChild(list)
   document.getElementById("addItem").appendChild(list)
 }
